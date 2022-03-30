@@ -8,6 +8,11 @@ yarn install
 yarn start
 ```
 
+Execute tests:
+`````
+yarn cypress open-ct
+````
+
 Please add an issue in case of errors.
 
 Developed by @CesarF

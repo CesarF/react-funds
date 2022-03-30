@@ -3,7 +3,7 @@ import { Typography } from '@material-ui/core';
 
 function PercentageText({ value }){
   return(
-    <Typography>{ value }{'%'}</Typography>
+    <Typography variant='body1'>{ value }{'%'}</Typography>
   )
 }
 export default PercentageText;

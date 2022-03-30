@@ -10,11 +10,14 @@ function FundCard({ name, returns }) {
       <Grid
         container
         direction='row'
+        justifyContent='center'
+        alignItems='center'
+        spacing={2}
       >
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <Typography>{ name }</Typography>
         </Grid>
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <Typography>Retorno de hoy</Typography>
           <Grid>
             <MoneyText value={returns.today}/>

@@ -4,12 +4,13 @@ import MoneyText from '../../../shared/MoneyText';
 
 
 function HistoryItem({ item }){
+  console.error( item );
   return (
     <Grid direction='vertical'>
       <MoneyText value={ item.amount }></MoneyText>
       <Grid>
-        <Typography>{ item.reference }</Typography>
-        <Typography>{ item.transactionDate }</Typography>
+        <Typography variant='body1'>{ item.reference }</Typography>
+        <Typography variant='body1'>{ item.transactionDate.toISOString() }</Typography>
       </Grid>
     </Grid>
   )

@@ -30,7 +30,7 @@ export const getTransactionHistory = ( userId, startDate, endDate ) => {
     reference: elem.reference,
     amount: elem.amount,
     transactionId: elem.transaction_id,
-    transactionDate: elem.transaction_date,
+    transactionDate: new Date( elem.transaction_date ),
     transactionType: elem.transaction_type,
   }));
 }

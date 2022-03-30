@@ -1,7 +1,7 @@
 import { getData } from './services/accountInfo';
 import { getTransactionHistory } from './services/accountTransactions';
-import { DO_INVEST, DO_WITHDRAW, SET_OPERATION, SET_ACCOUNT, SET_HISTORY } from "./actionTypes";
 import { assignFund } from './services/funding';
+import { DO_INVEST, DO_WITHDRAW, SET_ACCOUNT, SET_HISTORY } from "./actionTypes";
 
 
 export const executeTransaction = ( value ) => async ( dispatch ) => {
@@ -10,7 +10,7 @@ export const executeTransaction = ( value ) => async ( dispatch ) => {
     return dispatch({
       type    : DO_INVEST,
       payload : {
-        transactionDate: new Date().toISOString(),
+        transactionDate: new Date(),
         transactionType: 'DEPOSIT',
         reference: 'Mi portafolio',
         amount: value
@@ -62,11 +62,3 @@ export const getTransactions = () => async ( dispatch, getState ) => {
     });
   }
 }
-
-/*export const setToInvest = () => async ( dispatch ) => {
-  return dispatch({ type: SET_OPERATION, payload: INVEST })
-}
-
-export const setToRemove = () => async ( dispatch ) => {
-  return dispatch({ type: SET_OPERATION, payload: REMOVE })
-}*/

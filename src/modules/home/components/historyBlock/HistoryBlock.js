@@ -18,8 +18,11 @@ export const mapDispatchToProps = ( dispatch ) => {
 function HistoryBlock({ history, getTransactions }){
   React.useEffect(() => getTransactions(), []);
   return (
-    <Grid direction='vertical'>
-      { history.map( elem => <HistoryItem item={ elem }/>)}
+    <Grid
+      direction='vertical'
+      data-id='history-block'
+    >
+      { history.map( elem => <HistoryItem item={ elem }/>) }
     </Grid>
   )
 }

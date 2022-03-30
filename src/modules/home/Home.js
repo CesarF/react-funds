@@ -16,17 +16,19 @@ function Home({ account, returns }) {
       justify='center'
       alignItems='center'
     >
-      <div className={ classes.rootHome }>
+      <Grid >
         {/* TITLE */}
-        <Typography variant='h6' component='h1'>
-          Mi Portafolio
-        </Typography>
+        <Grid container justify='center'>
+          <Typography variant='h6' component='h1'>
+            Mi Portafolio
+          </Typography>
+        </Grid>
         {/* ACCOUNT FUNDS */}
-        <MoneyText
-          value={ account.balance }
-        />
+        <Grid container justify='center'>
+          <MoneyText value={ account.balance } size='large'/>
+        </Grid>
         {/* SUBTITLE */}
-        <Typography variant='h6' component='h1'>
+        <Typography variant='subtitle1' component='h2'>
           Planes actuales
         </Typography>
         {/* FONDOS */}
@@ -38,7 +40,7 @@ function Home({ account, returns }) {
         </Grid>
         {/* HISTORY */}
         <HistoryBlock />
-      </div>
+      </Grid>
     </Grid>
   )
 }
